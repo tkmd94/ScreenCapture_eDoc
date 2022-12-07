@@ -8,7 +8,7 @@ Eclipse External Beam Planning 画面をキャプチャし、ARIA eDoc プリン
 
 # Requirement
 
-* ARIA eDocs
+* ARIA eDoc
 * Eclipse 15.6 以上 (古いバージョンではチェックされていません。)
 
 # Installation
@@ -26,7 +26,7 @@ Eclipse External Beam Planning 画面をキャプチャし、ARIA eDoc プリン
  
 # Author
  
-Takashi Kodama
+* Takashi Kodama
  
 # License
  
