@@ -19,7 +19,7 @@ Capture the Eclipse External Beam Planning screen and save image directly to ARI
 4. Copy ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml to ARIA eDoc's Profiles folder and modify the settings.
 
 # Usage
-
+**Please use this source code at your own risk.**
 1. Display the screen you want to capture.
 2. Run the script from the registered keyboard shortcut.
 3. When script execution is complete, an OK dialog will appear.
