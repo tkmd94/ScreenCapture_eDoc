@@ -8,7 +8,7 @@ Capture the Eclipse External Beam Planning screen and save image directly to ARI
 
 # Requirement
 
-* ARIA eDocs
+* ARIA eDoc
 * Eclipse 15.6 or higher (Not checked in older versions.)
 
 # Installation
