@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<p:profile xmlns:p="ARIA_IC.Transformations.Entities" xmlns:pdf="ARIA_IC.Transformations.OperationsPdf" xmlns:x="ARIA_IC.Transformations.OperationsXml" xmlns:cs="ARIA_IC.Transformations.OperationsCodeDOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:in="ARIA_IC.Model">
+
+
+  <!-- The document type is defined by the presence of some text. -->
+  <x:regex scope="//in:Printout">
+    <x:match scope="in:Content">ESAPI\sScreenCapture</x:match>
+    <x:result tag="ScreenCapture">ScreenCapture</x:result>
+    <x:result tag="DocumentType">線量分布・DVH</x:result>
+  </x:regex>
+  
+  <!-- Profile Detection -->
+  <p:profile-detection test="//in:Printouts[in:Printout/DocumentType and in:Printout/ScreenCapture]"/>
+
+  <!-- Patient ID -->
+  <x:regex scope="//in:Printout">
+    <x:match scope="in:Content">Patient\sID:\s(.+?),\s</x:match>
+    <x:result tag="PatientId">$1</x:result>
+  </x:regex>
+
+  <!-- Course ID & Plan ID -->  
+    <x:regex scope="//in:Printout">
+    <x:match scope="in:Content">Course\sID:\s(.+?),\sPlan\sID:\s(.+?),</x:match>
+    <x:result tag="CourseId">$1</x:result>
+    <x:result tag="PlanId">$2</x:result>
+  </x:regex>
+
+    <x:regex scope="//in:Printout">
+    <x:match scope="in:Content">Printed\son\s(.+?)\sby</x:match>
+    <x:result tag="Date">$1</x:result>
+  </x:regex>
+
+  <!-- Template Name -->
+  <x:element tag="TemplateName" scope="//in:Printout">
+    <x:value-of select="concat(substring(PlanId,1,20),' (',substring(Date/text(),1,19),')')"/>
+  </x:element>
+
+  <!-- Approved Status -->
+  <!-- If IsApproved value is "true", then the document will be imported as approved. The approver is the author -->
+  <!-- If IsApproved value is false, then the document is imported as pending. -->
+  <x:element tag="IsApproved" scope="//in:Printout">false</x:element>
+
+  <!-- SupervisedBy -->
+  <!-- If SupervisedBy value is PatientPrimaryOncologist, then in document workspace "Supervised By" is equal to the patient primary oncologist -->
+  <!-- If SupervisedBy value is not set, then in document workspace "Supervised By" is equal to the document author -->
+  <!--<x:element tag="SupervisedBy" scope="//in:Printout">PatientPrimaryOncologist</x:element>-->
+
+  <x:transform src="SingleDocument.xslt" />
+  <cs:transform src="SupervisedBy.cs-transformation" />
+</p:profile>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenCapture_eDoc", "ScreenCapture_eDoc.csproj", "{2412A0AE-1FB6-4B5F-A5C1-EFBBB1CE4B51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2412A0AE-1FB6-4B5F-A5C1-EFBBB1CE4B51}.Debug|x64.ActiveCfg = Debug|x64
+		{2412A0AE-1FB6-4B5F-A5C1-EFBBB1CE4B51}.Debug|x64.Build.0 = Debug|x64
+		{2412A0AE-1FB6-4B5F-A5C1-EFBBB1CE4B51}.Release|x64.ActiveCfg = Release|x64
+		{2412A0AE-1FB6-4B5F-A5C1-EFBBB1CE4B51}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21187792-A924-461D-A7A9-DCB88CE83DF3}
+	EndGlobalSection
+EndGlobal
