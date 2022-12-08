@@ -6,6 +6,10 @@
 
 Capture the Eclipse External Beam Planning screen and save image directly to ARIA Documents via the ARIA eDoc printer.
 
+# Demo
+
+![Screen capture of planCompare UI](https://github.com/tkmd94/ScreenCapture_eDoc/blob/master/demo.gif)
+
 # Requirement
 
 * ARIA eDoc
