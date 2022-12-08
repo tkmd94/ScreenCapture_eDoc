@@ -6,6 +6,10 @@
 
 Eclipse External Beam Planning 画面をキャプチャし、ARIA eDoc プリンターを介して画像を ARIA ドキュメントに直接保存します。
 
+# Demo
+
+![Screen capture of planCompare UI](https://github.com/tkmd94/ScreenCapture_eDoc/blob/master/demo.gif)
+
 # Requirement
 
 * ARIA eDoc
