@@ -20,7 +20,15 @@ Eclipse External Beam Planning 画面をキャプチャし、ARIA eDoc プリン
 1. このプロジェクトをビルドして、DLL ファイル [ScreenCapture_eDoc.esapi.dll] を生成します。
 2. 生成された DLL ファイルを、Eclipse ツールバーの [ツール] -> [スクリプト] で指定したフォルダーにコピーします。
 3. このスクリプトをお気に入りとしてマークし、キーボード ショートカットを設定します。
-4. ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml を ARIA eDoc の Profiles フォルダーにコピーし、設定を変更します。
+4. ARIA Data AdministrationでDocumentTypeを登録する。
+    1. ARIA -> Data Administration -> Clinical Assessment -> DocumentTypeにスクリーンキャプチャで取り込む文書の名称を登録する。
+5. ARIA eDocのプロファイルを登録する。
+    1. サンプル[ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml]の”ScreenCapture”の部分を前項で登録した名称に変更してプロファイルを保存する。   
+        ```<x:result tag="DocumentType">ScreenCapture</x:result>```   
+        ※プロファイル名は適宜修正する。
+    2. ARIA serverの次のフォルダにプロファイルをコピーする。   
+        ```D:\Varian\Data\ARIA IC\ARIAeDoc\Profiles```   
+    3. ARIA Serverのサービスから[Varian ARIA IC ARIA eDocサービス]を再起動する。
 
 # Usage
 
