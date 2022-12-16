@@ -20,7 +20,16 @@ Capture the Eclipse External Beam Planning screen and save image directly to ARI
 1. Build this project to generate the DLL file [ScreenCapture_eDoc.esapi.dll]. 
 2. Copy the generated DLL file to the folder specified in Tools -> Scripts in the Eclipse toolbar.
 3. Mark this script as a favorite and set a keyboard shortcut.
-4. Copy ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml to ARIA eDoc's Profiles folder and modify the settings.
+4. Register DocumentType in ARIA Data Administration.
+    1. Register the DocumentType of the imported file.   
+        ```ARIA -> Data Administration -> Clinical Assessment -> DocumentType```
+5. Register ARIA eDoc profile.
+    1. Change ```ScreenCapture``` part of the sample[```ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml```] to the name registered in the previous section and save the profile.   
+        ```<x:result tag="DocumentType">ScreenCapture</x:result>```   
+        ***Change the profile name appropriately.**
+    2. Copy the profile to the folder on ARIA server.
+        ```D:\Varian\Data\ARIA IC\ARIAeDoc\Profiles```   
+    3. Restart ```Varian ARIA IC ARIA eDoc``` from the ARIA Server service.
 
 # Usage
 **Please use this source code at your own risk.**
