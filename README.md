@@ -23,12 +23,12 @@ Eclipse External Beam Planning 画面をキャプチャし、ARIA eDoc プリン
 4. ARIA Data AdministrationでDocumentTypeを登録する。
     1. ARIA -> Data Administration -> Clinical Assessment -> DocumentTypeにスクリーンキャプチャで取り込む文書の名称を登録する。
 5. ARIA eDocのプロファイルを登録する。
-    1. サンプル[ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml]の”ScreenCapture”の部分を前項で登録した名称に変更してプロファイルを保存する。   
+    1. サンプル```ARIAeDocProfile_ENU_ESAPI_ScreenCapture.xml```の```ScreenCapture```の部分を前項で登録した名称に変更してプロファイルを保存する。   
         ```<x:result tag="DocumentType">ScreenCapture</x:result>```   
         ※プロファイル名は適宜修正する。
     2. ARIA serverの次のフォルダにプロファイルをコピーする。   
         ```D:\Varian\Data\ARIA IC\ARIAeDoc\Profiles```   
-    3. ARIA Serverのサービスから[Varian ARIA IC ARIA eDocサービス]を再起動する。
+    3. ARIA Serverのサービスから```Varian ARIA IC ARIA eDoc```を再起動する。
 
 # Usage
 
