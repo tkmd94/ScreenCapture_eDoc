@@ -6,7 +6,7 @@
   <x:regex scope="//in:Printout">
     <x:match scope="in:Content">ESAPI\sScreenCapture</x:match>
     <x:result tag="ScreenCapture">ScreenCapture</x:result>
-    <x:result tag="DocumentType">線量分布・DVH</x:result>
+    <x:result tag="DocumentType">ScreenCapture</x:result>
   </x:regex>
   
   <!-- Profile Detection -->
